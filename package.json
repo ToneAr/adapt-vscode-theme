@@ -1,0 +1,38 @@
+{
+  "name": "adapt-vscode",
+  "displayName": "Adapt VS Code",
+  "description": "Complete adaptive theming for VS Code - a color theme and icon theme that automatically respond to your system accent color",
+  "version": "0.0.1",
+  "publisher": "Tone",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ToneAr/adapt-vscode-theme"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Extension Packs",
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color theme",
+    "icon theme",
+    "adapt",
+    "adaptive",
+    "system accent",
+    "dynamic",
+    "accent color",
+    "monochrome icons",
+    "kde",
+    "gnome",
+    "macos",
+    "windows"
+  ],
+  "extensionPack": [
+    "Tone.adapt-vscode-colors",
+    "Tone.adapt-vscode-icons"
+  ]
+}

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#1e1e1e"/>
+
+  <!-- Outer ring representing adaptive/dynamic nature -->
+  <circle cx="64" cy="64" r="52" fill="none" stroke="url(#gradient)" stroke-width="4"/>
+
+  <!-- Inner accent shape - abstract "A" for Adaptive -->
+  <path d="M64 28 L88 92 L80 92 L74 76 L54 76 L48 92 L40 92 L64 28Z M64 44 L56 68 L72 68 L64 44Z" fill="url(#gradient)"/>
+
+  <!-- Gradient definitions -->
+  <defs>
+    <!-- Rainbow gradient for the ring and "A" -->
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="17%" stop-color="#FF8000"/>
+      <stop offset="33%" stop-color="#FFD700"/>
+      <stop offset="50%" stop-color="#00C853"/>
+      <stop offset="67%" stop-color="#2979FF"/>
+      <stop offset="83%" stop-color="#651FFF"/>
+      <stop offset="100%" stop-color="#D500F9"/>
+    </linearGradient>
+
+  </defs>
+
+  <!-- Animated color cycling on the ring -->
+  <circle cx="64" cy="64" r="52" fill="none" stroke-width="4">
+    <set attributeName="stroke" to="#FF0000"/>
+    <animate attributeName="stroke"
+      values="#FF0000;#FF8000;#FFD700;#00C853;#2979FF;#651FFF;#D500F9;#FF0000"
+      dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Animated color cycling on the "A" -->
+  <path d="M64 28 L88 92 L80 92 L74 76 L54 76 L48 92 L40 92 L64 28Z M64 44 L56 68 L72 68 L64 44Z">
+    <animate attributeName="fill"
+      values="#FF0000;#FF8000;#FFD700;#00C853;#2979FF;#651FFF;#D500F9;#FF0000"
+      dur="6s" repeatCount="indefinite"/>
+  </path>
+</svg>
