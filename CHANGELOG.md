@@ -2,6 +2,11 @@
 
 All notable changes to the Adaptive VS Code extension pack will be documented in this file.
 
+## [Unreleased]
+
+### Added
+- Cursor support: documented installing from Open VSX and added `publish:openvsx` scripts
+
 ## [0.0.1] - 2026-01-22
 
 ### Added

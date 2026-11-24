@@ -1,8 +1,8 @@
 # Adapt VS Code
 
-![logo](./images/icon.svg)
+![logo](./images/icon.png)
 
-A complete adaptive theming solution for VS Code that automatically responds to your system accent color.
+A complete adaptive theming solution for VS Code and Cursor that automatically responds to your system accent color.
 
 ## What's Included
 
@@ -34,10 +34,25 @@ A dynamic icon theme that converts file and folder icons to monochrome using you
 
 ## Installation
 
-1. Install this extension pack from the VS Code Marketplace
+1. Install this extension pack from the VS Code Marketplace (VS Code) or Open VSX (Cursor)
 2. Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
 3. Select **Preferences: Color Theme** → **Adapt Dark**
 4. Select **Preferences: File Icon Theme** → **Adapt Icons**
+
+### Cursor
+
+Cursor is built on VS Code and runs VS Code extensions. It installs extensions from [Open VSX](https://open-vsx.org/) rather than the VS Code Marketplace:
+
+1. Open the **Extensions** view in Cursor (`Ctrl+Shift+X` / `Cmd+Shift+X`) and search for **Adapt VS Code**, or
+2. Install a packaged `.vsix` directly:
+
+   ```bash
+   cursor --install-extension adapt-vscode-0.0.1.vsix
+   ```
+
+   (or drag the `.vsix` onto the Extensions view, or use **Extensions: Install from VSIX...** from the Command Palette)
+
+The pack pulls in `Tone.adapt-vscode-colors` and `Tone.adapt-vscode-icons` from the same registry, so both must be published to Open VSX for it to install in Cursor.
 
 ## Configuration
 
@@ -77,6 +92,13 @@ The Adapt Icons extension can convert any compatible icon theme to monochrome:
 3. Select the root folder of the icon theme
 4. The icons will be converted to monochrome using your accent color
 
+## Editor Support
+
+| Editor | Supported | Notes |
+|--------|-----------|-------|
+| VS Code 1.85+ | ✅ | Installed from the VS Code Marketplace |
+| Cursor | ✅ | Installed from Open VSX; blur effects need a writable (non-AppImage) install |
+
 ## Platform Support
 
 | Platform | Accent Detection | Real-time Updates |
@@ -89,6 +111,16 @@ The Adapt Icons extension can convert any compatible icon theme to monochrome:
 ## Screenshots
 
 *Coming soon*
+
+## Building & Publishing
+
+```bash
+npm run package          # builds adapt-vscode-<version>.vsix
+npm run publish:vscode   # VS Code Marketplace (needs a VSCE_PAT)
+npm run publish:openvsx  # Open VSX, used by Cursor, VSCodium, etc. (needs an OVSX_PAT)
+```
+
+Cursor installs extensions from Open VSX, so publish there for the extension to be found in Cursor's Extensions view.
 
 ## Contributing
 
