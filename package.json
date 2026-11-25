@@ -2,7 +2,7 @@
   "name": "adapt-vscode",
   "displayName": "Adapt VS Code",
   "description": "Complete adaptive theming for VS Code and Cursor - a color theme and icon theme that automatically respond to your system accent color",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "Tone",
   "license": "MIT",
   "icon": "images/icon.png",

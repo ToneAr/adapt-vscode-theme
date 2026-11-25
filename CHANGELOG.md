@@ -2,10 +2,11 @@
 
 All notable changes to the Adaptive VS Code extension pack will be documented in this file.
 
-## [Unreleased]
+## [0.1.0] - 2026-11-24
 
 ### Added
-- Cursor support: documented installing from Open VSX and added `publish:openvsx` scripts
+- Cursor support: the pack and both extensions are published to Open VSX, so they install from Cursor's Extensions view
+- Requires Adapt Colors 0.10.0 and Adapt Icons 0.10.0 for the Cursor-specific fixes and icons
 
 ## [0.0.1] - 2026-01-22
 
